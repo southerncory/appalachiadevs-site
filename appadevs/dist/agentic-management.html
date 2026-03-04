@@ -1,0 +1,272 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Agentic Management Systems | Appalachia Devs</title>
+    <meta
+      name="description"
+      content="Enterprise-grade monitoring, control, and optimization for AI agents and automation systems. Visibility, cost control, and operational excellence."
+    />
+
+    <meta property="og:title" content="Agentic Management Systems | Appalachia Devs" />
+    <meta
+      property="og:description"
+      content="Enterprise-grade monitoring, control, and optimization for AI agents and automation systems."
+    />
+    <meta property="og:type" content="website" />
+
+    <link rel="icon" type="image/svg+xml" href="/logo.svg" />
+    <link rel="manifest" href="/site.webmanifest" />
+    <link rel="stylesheet" crossorigin href="/assets/index-B2n2RocN.css" />
+    <style>
+      .amsHero { padding: 60px 0 40px; }
+      .amsHeroInner { max-width: 800px; }
+      .amsHeroTitle { font-size: clamp(32px, 4.5vw, 52px); line-height: 1.08; letter-spacing: -0.03em; margin: 0; }
+      .amsHeroTitle em { font-style: normal; background: var(--grad); -webkit-background-clip: text; background-clip: text; color: transparent; }
+      .amsLead { margin: 20px 0 0; color: var(--muted); font-size: 18px; line-height: 1.7; max-width: 640px; }
+      .amsCtaRow { display: flex; gap: 12px; margin-top: 28px; flex-wrap: wrap; }
+      
+      .problemSection { padding: 50px 0; border-top: 1px solid var(--border); }
+      .problemHeader { margin-bottom: 32px; }
+      .problemHeader h2 { margin: 0; font-size: 28px; letter-spacing: -0.02em; }
+      .problemHeader p { margin: 12px 0 0; color: var(--subtle); font-size: 16px; line-height: 1.6; max-width: 600px; }
+      
+      .problemGrid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; }
+      .problemCard { padding: 24px; border-radius: var(--radius); border: 1px solid rgba(255,255,255,0.1); background: rgba(255,255,255,0.04); }
+      .problemCard h3 { margin: 0 0 10px; font-size: 17px; color: var(--text); }
+      .problemCard p { margin: 0; color: var(--muted); font-size: 14px; line-height: 1.65; }
+      .problemCard .stat { font-size: 32px; font-weight: 700; background: var(--grad); -webkit-background-clip: text; background-clip: text; color: transparent; margin-bottom: 8px; }
+      
+      .solutionSection { padding: 50px 0; border-top: 1px solid var(--border); }
+      .solutionHeader { margin-bottom: 32px; }
+      .solutionHeader h2 { margin: 0; font-size: 28px; letter-spacing: -0.02em; }
+      .solutionHeader p { margin: 12px 0 0; color: var(--subtle); font-size: 16px; line-height: 1.6; max-width: 620px; }
+      
+      .capabilityGrid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+      .capabilityCard { padding: 22px; border-radius: var(--radius); border: 1px solid rgba(255,255,255,0.12); background: rgba(255,255,255,0.06); }
+      .capabilityCard .icon { width: 36px; height: 36px; border-radius: 10px; background: var(--grad); display: flex; align-items: center; justify-content: center; margin-bottom: 14px; font-size: 18px; }
+      .capabilityCard h3 { margin: 0 0 8px; font-size: 16px; }
+      .capabilityCard p { margin: 0; color: var(--muted); font-size: 14px; line-height: 1.6; }
+      
+      .tierSection { padding: 50px 0; border-top: 1px solid var(--border); }
+      .tierHeader { margin-bottom: 32px; }
+      .tierHeader h2 { margin: 0; font-size: 28px; letter-spacing: -0.02em; }
+      .tierHeader p { margin: 12px 0 0; color: var(--subtle); font-size: 16px; line-height: 1.6; }
+      
+      .tierGrid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+      .tierCard { padding: 28px 24px; border-radius: var(--radius); border: 1px solid rgba(255,255,255,0.12); background: rgba(255,255,255,0.05); display: flex; flex-direction: column; }
+      .tierCard.featured { border-color: rgba(46,201,255,0.4); background: rgba(46,201,255,0.08); }
+      .tierName { font-size: 13px; text-transform: uppercase; letter-spacing: 0.1em; color: var(--subtle); margin-bottom: 6px; }
+      .tierCard h3 { margin: 0 0 16px; font-size: 22px; }
+      .tierCard ul { list-style: none; padding: 0; margin: 0 0 20px; flex: 1; }
+      .tierCard li { padding: 8px 0; border-bottom: 1px solid rgba(255,255,255,0.06); color: var(--muted); font-size: 14px; display: flex; align-items: center; gap: 10px; }
+      .tierCard li:last-child { border-bottom: none; }
+      .tierCard li::before { content: "✓"; color: #7cf0a8; font-weight: bold; }
+      .tierCard .tierCta { margin-top: auto; }
+      
+      .ctaSection { padding: 60px 0; border-top: 1px solid var(--border); text-align: center; }
+      .ctaSection h2 { margin: 0 0 12px; font-size: 28px; }
+      .ctaSection p { margin: 0 0 24px; color: var(--muted); font-size: 16px; }
+      .ctaSection .ctaButtons { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
+      
+      .backLink { display: inline-flex; align-items: center; gap: 8px; color: var(--muted); font-size: 14px; margin-bottom: 20px; padding: 8px 12px; border-radius: 10px; border: 1px solid transparent; transition: all 0.15s ease; }
+      .backLink:hover { color: var(--text); border-color: rgba(255,255,255,0.15); background: rgba(255,255,255,0.05); }
+      
+      @media (max-width: 900px) {
+        .problemGrid, .capabilityGrid, .tierGrid { grid-template-columns: 1fr; }
+      }
+      @media (max-width: 600px) {
+        .amsHero { padding: 40px 0 30px; }
+        .amsLead { font-size: 16px; }
+      }
+    </style>
+  </head>
+  <body>
+    <header class="topbar">
+      <div class="container topbarInner">
+        <a class="brand" href="/" aria-label="Appalachia Devs">
+          <img class="brandLogo" src="/logo.svg" alt="Appalachia Devs logo" />
+          <span class="brandName">
+            <strong>Appalachia Devs</strong>
+            <span>Miami, Florida • Appalachia Devs, Inc.</span>
+          </span>
+        </a>
+        <nav class="nav" aria-label="Primary">
+          <a href="/#services">Services</a>
+          <a href="/#approach">How we help</a>
+          <a href="/#about">About</a>
+          <a href="/#contact">Contact</a>
+        </nav>
+        <div class="ctaRow">
+          <a class="button" href="mailto:hello@appalachiadevs.com">Email</a>
+          <a class="button buttonPrimary" href="https://cal.com/" target="_blank" rel="noreferrer">Book a call</a>
+        </div>
+      </div>
+    </header>
+
+    <main id="main">
+      <!-- Hero -->
+      <section class="amsHero">
+        <div class="container amsHeroInner">
+          <a class="backLink" href="/">← Back to Appalachia Devs</a>
+          <h1 class="amsHeroTitle">Your AI agents are running.<br/><em>Do you know what they're doing?</em></h1>
+          <p class="amsLead">
+            AI agents and automation systems are powerful — until they fail silently, overspend, or make decisions no one can explain. 
+            Agentic Management Systems gives you visibility, control, and operational confidence across every agent in your stack.
+          </p>
+          <div class="amsCtaRow">
+            <a class="button buttonPrimary" href="https://cal.com/" target="_blank" rel="noreferrer">Schedule a consultation</a>
+            <a class="button" href="#capabilities">View capabilities</a>
+          </div>
+        </div>
+      </section>
+
+      <!-- The Problem -->
+      <section class="problemSection">
+        <div class="container">
+          <div class="problemHeader">
+            <h2>The problem no one talks about</h2>
+            <p>Most teams deploy AI agents without the infrastructure to manage them. The consequences compound quietly — until they don't.</p>
+          </div>
+          <div class="problemGrid">
+            <div class="problemCard">
+              <div class="stat">73%</div>
+              <h3>No visibility into agent behavior</h3>
+              <p>Teams can't see what agents are doing, why they made a decision, or where they failed. When something breaks, debugging is guesswork.</p>
+            </div>
+            <div class="problemCard">
+              <div class="stat">4–10×</div>
+              <h3>Cost overruns in production</h3>
+              <p>Agentic loops, retries, and unbounded tool calls burn through API budgets. Most teams don't know their actual spend until the invoice arrives.</p>
+            </div>
+            <div class="problemCard">
+              <div class="stat">89%</div>
+              <h3>No systematic quality checks</h3>
+              <p>Agents degrade over time. Model updates, prompt drift, and edge cases erode performance — with no automated way to catch regressions.</p>
+            </div>
+            <div class="problemCard">
+              <div class="stat">0</div>
+              <h3>Audit trail for compliance</h3>
+              <p>Regulated industries need to explain AI decisions. Most agent deployments have no structured logging, no trace history, no accountability.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- The Solution -->
+      <section class="solutionSection" id="capabilities">
+        <div class="container">
+          <div class="solutionHeader">
+            <h2>What Agentic Management Systems provides</h2>
+            <p>A unified control plane for every AI agent and automation system in your organization — purpose-built for operational excellence.</p>
+          </div>
+          <div class="capabilityGrid">
+            <div class="capabilityCard">
+              <div class="icon">📡</div>
+              <h3>Unified Agent Registry</h3>
+              <p>Complete inventory of every agent: what it does, what it can access, who owns it, and its current status. One source of truth.</p>
+            </div>
+            <div class="capabilityCard">
+              <div class="icon">🔍</div>
+              <h3>Full Trace Observability</h3>
+              <p>Every decision, tool call, and token — logged and searchable. Understand exactly what happened and why, down to the millisecond.</p>
+            </div>
+            <div class="capabilityCard">
+              <div class="icon">💰</div>
+              <h3>Cost Intelligence</h3>
+              <p>Real-time spend tracking per agent, per workflow, per customer. Set budgets, get alerts, and eliminate surprise invoices.</p>
+            </div>
+            <div class="capabilityCard">
+              <div class="icon">🚨</div>
+              <h3>Anomaly Detection & Alerts</h3>
+              <p>Automated monitoring for failures, cost spikes, latency issues, and behavioral drift. Know before your users do.</p>
+            </div>
+            <div class="capabilityCard">
+              <div class="icon">✅</div>
+              <h3>Evaluation Framework</h3>
+              <p>Continuous quality checks and regression testing. Catch degradation before it reaches production.</p>
+            </div>
+            <div class="capabilityCard">
+              <div class="icon">🔐</div>
+              <h3>Access Control & Audit</h3>
+              <p>Granular permissions, action logging, and compliance-ready audit trails. Built for regulated environments.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Service Tiers -->
+      <section class="tierSection">
+        <div class="container">
+          <div class="tierHeader">
+            <h2>Engagement models</h2>
+            <p>From initial assessment to fully managed operations — choose the level of support that fits your organization.</p>
+          </div>
+          <div class="tierGrid">
+            <div class="tierCard">
+              <div class="tierName">Foundation</div>
+              <h3>Assessment & Setup</h3>
+              <ul>
+                <li>Agent inventory and risk assessment</li>
+                <li>Observability infrastructure setup</li>
+                <li>Cost tracking and alerting</li>
+                <li>Documentation and runbooks</li>
+                <li>Team training session</li>
+              </ul>
+              <a class="button tierCta" href="https://cal.com/" target="_blank" rel="noreferrer">Get started</a>
+            </div>
+            <div class="tierCard featured">
+              <div class="tierName">Growth</div>
+              <h3>Managed Operations</h3>
+              <ul>
+                <li>Everything in Foundation</li>
+                <li>Ongoing monitoring and incident response</li>
+                <li>Monthly optimization reviews</li>
+                <li>Evaluation framework management</li>
+                <li>Dedicated Slack channel</li>
+              </ul>
+              <a class="button buttonPrimary tierCta" href="https://cal.com/" target="_blank" rel="noreferrer">Book consultation</a>
+            </div>
+            <div class="tierCard">
+              <div class="tierName">Enterprise</div>
+              <h3>Full Partnership</h3>
+              <ul>
+                <li>Everything in Growth</li>
+                <li>Custom integrations and tooling</li>
+                <li>On-call support with SLAs</li>
+                <li>Quarterly business reviews</li>
+                <li>Dedicated account team</li>
+              </ul>
+              <a class="button tierCta" href="https://cal.com/" target="_blank" rel="noreferrer">Contact us</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- CTA -->
+      <section class="ctaSection">
+        <div class="container">
+          <h2>Ready to take control?</h2>
+          <p>Schedule a 30-minute consultation to assess your current agent landscape and identify operational gaps.</p>
+          <div class="ctaButtons">
+            <a class="button buttonPrimary" href="https://cal.com/" target="_blank" rel="noreferrer">Schedule consultation</a>
+            <a class="button" href="mailto:hello@appalachiadevs.com">Email us</a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container footerInner">
+        <small>© 2026 Appalachia Devs, Inc. — Miami, Florida</small>
+        <div class="footerLinks" aria-label="Footer">
+          <a href="/#services">Services</a>
+          <a href="/#about">About</a>
+          <a href="/#contact">Contact</a>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
