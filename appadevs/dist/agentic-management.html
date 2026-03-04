@@ -4,16 +4,16 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <title>Agentic Management Systems | Appalachia Devs</title>
+    <title>Agent Control Plane | Appalachia Devs</title>
     <meta
       name="description"
-      content="Enterprise-grade monitoring, control, and optimization for AI agents and automation systems. Visibility, cost control, and operational excellence."
+      content="The unified control plane for AI agent operations. One dashboard for every wallet, every identity, every policy. Enterprise-grade visibility and compliance."
     />
 
-    <meta property="og:title" content="Agentic Management Systems | Appalachia Devs" />
+    <meta property="og:title" content="Agent Control Plane | Appalachia Devs" />
     <meta
       property="og:description"
-      content="Enterprise-grade monitoring, control, and optimization for AI agents and automation systems."
+      content="The unified control plane for AI agent operations. Manage spending, policies, and compliance across all your agents."
     />
     <meta property="og:type" content="website" />
 
@@ -27,6 +27,8 @@
       .amsHeroTitle em { font-style: normal; background: var(--grad); -webkit-background-clip: text; background-clip: text; color: transparent; }
       .amsLead { margin: 20px 0 0; color: var(--muted); font-size: 18px; line-height: 1.7; max-width: 640px; }
       .amsCtaRow { display: flex; gap: 12px; margin-top: 28px; flex-wrap: wrap; }
+      
+      .positionBadge { display: inline-flex; align-items: center; gap: 8px; padding: 6px 14px; border-radius: 20px; background: rgba(46,201,255,0.12); border: 1px solid rgba(46,201,255,0.25); font-size: 13px; color: #7cf0a8; margin-bottom: 16px; letter-spacing: 0.02em; }
       
       .problemSection { padding: 50px 0; border-top: 1px solid var(--border); }
       .problemHeader { margin-bottom: 32px; }
@@ -46,9 +48,14 @@
       
       .capabilityGrid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
       .capabilityCard { padding: 22px; border-radius: var(--radius); border: 1px solid rgba(255,255,255,0.12); background: rgba(255,255,255,0.06); }
-      .capabilityCard .icon { width: 36px; height: 36px; border-radius: 10px; background: var(--grad); display: flex; align-items: center; justify-content: center; margin-bottom: 14px; font-size: 18px; }
       .capabilityCard h3 { margin: 0 0 8px; font-size: 16px; }
       .capabilityCard p { margin: 0; color: var(--muted); font-size: 14px; line-height: 1.6; }
+      
+      .integrationSection { padding: 50px 0; border-top: 1px solid var(--border); }
+      .integrationHeader { margin-bottom: 24px; text-align: center; }
+      .integrationHeader h2 { margin: 0; font-size: 22px; letter-spacing: -0.02em; color: var(--subtle); }
+      .integrationLogos { display: flex; justify-content: center; gap: 40px; flex-wrap: wrap; align-items: center; opacity: 0.7; }
+      .integrationLogos span { font-size: 15px; color: var(--muted); padding: 12px 20px; border: 1px solid rgba(255,255,255,0.1); border-radius: 8px; }
       
       .tierSection { padding: 50px 0; border-top: 1px solid var(--border); }
       .tierHeader { margin-bottom: 32px; }
@@ -59,12 +66,19 @@
       .tierCard { padding: 28px 24px; border-radius: var(--radius); border: 1px solid rgba(255,255,255,0.12); background: rgba(255,255,255,0.05); display: flex; flex-direction: column; }
       .tierCard.featured { border-color: rgba(46,201,255,0.4); background: rgba(46,201,255,0.08); }
       .tierName { font-size: 13px; text-transform: uppercase; letter-spacing: 0.1em; color: var(--subtle); margin-bottom: 6px; }
+      .tierPrice { font-size: 28px; font-weight: 700; margin-bottom: 4px; }
+      .tierDesc { font-size: 14px; color: var(--muted); margin-bottom: 16px; }
       .tierCard h3 { margin: 0 0 16px; font-size: 22px; }
       .tierCard ul { list-style: none; padding: 0; margin: 0 0 20px; flex: 1; }
       .tierCard li { padding: 8px 0; border-bottom: 1px solid rgba(255,255,255,0.06); color: var(--muted); font-size: 14px; display: flex; align-items: center; gap: 10px; }
       .tierCard li:last-child { border-bottom: none; }
       .tierCard li::before { content: "✓"; color: #7cf0a8; font-weight: bold; }
       .tierCard .tierCta { margin-top: auto; }
+      
+      .servicesCallout { padding: 40px 0; border-top: 1px solid var(--border); }
+      .servicesCalloutInner { display: flex; align-items: center; justify-content: space-between; gap: 32px; padding: 32px; border-radius: var(--radius); background: linear-gradient(135deg, rgba(46,201,255,0.08), rgba(124,240,168,0.08)); border: 1px solid rgba(46,201,255,0.2); }
+      .servicesCalloutText h3 { margin: 0 0 8px; font-size: 20px; }
+      .servicesCalloutText p { margin: 0; color: var(--muted); font-size: 15px; }
       
       .ctaSection { padding: 60px 0; border-top: 1px solid var(--border); text-align: center; }
       .ctaSection h2 { margin: 0 0 12px; font-size: 28px; }
@@ -76,10 +90,12 @@
       
       @media (max-width: 900px) {
         .problemGrid, .capabilityGrid, .tierGrid { grid-template-columns: 1fr; }
+        .servicesCalloutInner { flex-direction: column; text-align: center; }
       }
       @media (max-width: 600px) {
         .amsHero { padding: 40px 0 30px; }
         .amsLead { font-size: 16px; }
+        .integrationLogos { gap: 16px; }
       }
     </style>
   </head>
@@ -111,14 +127,15 @@
       <section class="amsHero">
         <div class="container amsHeroInner">
           <a class="backLink" href="/">← Back to Appalachia Devs</a>
-          <h1 class="amsHeroTitle">Your AI agents are running.<br/><em>Do you know what they're doing?</em></h1>
+          <div class="positionBadge">Agent Economic Infrastructure</div>
+          <h1 class="amsHeroTitle">One control plane.<br/><em>Every agent. Every wallet.</em></h1>
           <p class="amsLead">
-            AI agents and automation systems are powerful — until they fail silently, overspend, or make decisions no one can explain. 
-            Agentic Management Systems gives you visibility, control, and operational confidence across every agent in your stack.
+            Your agents use Coinbase, Stripe, Google AP2, and custom rails. Each has its own dashboard, its own policies, its own blind spots. 
+            We build the unified layer that makes them all visible, controllable, and audit-ready.
           </p>
           <div class="amsCtaRow">
-            <a class="button buttonPrimary" href="https://cal.com/" target="_blank" rel="noreferrer">Schedule a consultation</a>
-            <a class="button" href="#capabilities">View capabilities</a>
+            <a class="button buttonPrimary" href="/agent-operations-services.html">View services</a>
+            <a class="button" href="#capabilities">See capabilities</a>
           </div>
         </div>
       </section>
@@ -127,29 +144,29 @@
       <section class="problemSection">
         <div class="container">
           <div class="problemHeader">
-            <h2>The problem no one talks about</h2>
-            <p>Most teams deploy AI agents without the infrastructure to manage them. The consequences compound quietly — until they don't.</p>
+            <h2>The wallet sprawl problem</h2>
+            <p>The rails are built. Coinbase, Stripe, and Google shipped agent wallets. But nobody ships the control layer — and enterprises are about to feel it.</p>
           </div>
           <div class="problemGrid">
             <div class="problemCard">
-              <div class="stat">73%</div>
-              <h3>No visibility into agent behavior</h3>
-              <p>Teams can't see what agents are doing, why they made a decision, or where they failed. When something breaks, debugging is guesswork.</p>
-            </div>
-            <div class="problemCard">
-              <div class="stat">4–10×</div>
-              <h3>Cost overruns in production</h3>
-              <p>Agentic loops, retries, and unbounded tool calls burn through API budgets. Most teams don't know their actual spend until the invoice arrives.</p>
-            </div>
-            <div class="problemCard">
-              <div class="stat">89%</div>
-              <h3>No systematic quality checks</h3>
-              <p>Agents degrade over time. Model updates, prompt drift, and edge cases erode performance — with no automated way to catch regressions.</p>
+              <div class="stat">12+</div>
+              <h3>Wallet types per enterprise</h3>
+              <p>Between Coinbase Agentic, Stripe x402, Google AP2, Chimoney, and custom integrations — your agents are scattered across a dozen rails with no unified view.</p>
             </div>
             <div class="problemCard">
               <div class="stat">0</div>
-              <h3>Audit trail for compliance</h3>
-              <p>Regulated industries need to explain AI decisions. Most agent deployments have no structured logging, no trace history, no accountability.</p>
+              <h3>Cross-wallet policy enforcement</h3>
+              <p>Each system has its own rules. No way to say "this agent class can spend $500/day total across all rails" without custom engineering.</p>
+            </div>
+            <div class="problemCard">
+              <div class="stat">6 mo</div>
+              <h3>Until the audit question</h3>
+              <p>SOC2, HIPAA, FINRA — auditors will ask "who authorized this agent spend?" Most teams have no unified answer. The scramble is coming.</p>
+            </div>
+            <div class="problemCard">
+              <div class="stat">50+</div>
+              <h3>Agents per org by Q4 2026</h3>
+              <p>Agent deployments are scaling fast. At 10 agents, spreadsheets work. At 50, you need infrastructure. At 200, you need us.</p>
             </div>
           </div>
         </div>
@@ -159,34 +176,64 @@
       <section class="solutionSection" id="capabilities">
         <div class="container">
           <div class="solutionHeader">
-            <h2>What Agentic Management Systems provides</h2>
-            <p>A unified control plane for every AI agent and automation system in your organization — purpose-built for operational excellence.</p>
+            <h2>The orchestration layer</h2>
+            <p>We don't replace your wallets — we unify them. One dashboard, one policy engine, one audit trail across every agent economic system.</p>
           </div>
           <div class="capabilityGrid">
             <div class="capabilityCard">
-              <h3>Unified Agent Registry</h3>
-              <p>Complete inventory of every agent: what it does, what it can access, who owns it, and its current status. One source of truth.</p>
+              <h3>Universal Agent Registry</h3>
+              <p>Every agent, every identity (ERC-8004, DID, custom), every wallet connection — inventoried and tracked in one place.</p>
             </div>
             <div class="capabilityCard">
-              <h3>Full Trace Observability</h3>
-              <p>Every decision, tool call, and token — logged and searchable. Understand exactly what happened and why, down to the millisecond.</p>
+              <h3>Cross-Rail Policy Engine</h3>
+              <p>Define spending rules that work across Coinbase, Stripe, AP2, and any other rail. Per-agent limits, approval workflows, category restrictions.</p>
             </div>
             <div class="capabilityCard">
-              <h3>Cost Intelligence</h3>
-              <p>Real-time spend tracking per agent, per workflow, per customer. Set budgets, get alerts, and eliminate surprise invoices.</p>
+              <h3>Unified Transaction View</h3>
+              <p>See every agent transaction across every wallet in one dashboard. Filter by agent, by rail, by time, by amount.</p>
             </div>
             <div class="capabilityCard">
-              <h3>Anomaly Detection & Alerts</h3>
-              <p>Automated monitoring for failures, cost spikes, latency issues, and behavioral drift. Know before your users do.</p>
+              <h3>Anomaly Detection</h3>
+              <p>Automated alerts when spending patterns deviate. Catch runaway agents, compromised credentials, and policy violations before damage spreads.</p>
             </div>
             <div class="capabilityCard">
-              <h3>Evaluation Framework</h3>
-              <p>Continuous quality checks and regression testing. Catch degradation before it reaches production.</p>
+              <h3>Approval Workflows</h3>
+              <p>Transactions over threshold require human sign-off. Slack, email, or dashboard — configurable per agent class and amount.</p>
             </div>
             <div class="capabilityCard">
-              <h3>Access Control & Audit</h3>
-              <p>Granular permissions, action logging, and compliance-ready audit trails. Built for regulated environments.</p>
+              <h3>Compliance-Ready Audit</h3>
+              <p>One-click export for SOC2, HIPAA, and FINRA audits. Every action logged, every decision traceable, every approval documented.</p>
             </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Integrations -->
+      <section class="integrationSection">
+        <div class="container">
+          <div class="integrationHeader">
+            <h2>Works with the rails you already use</h2>
+          </div>
+          <div class="integrationLogos">
+            <span>Coinbase Agentic</span>
+            <span>Stripe x402</span>
+            <span>Google AP2</span>
+            <span>Chimoney</span>
+            <span>ERC-8004</span>
+            <span>Custom Rails</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- Services Callout -->
+      <section class="servicesCallout">
+        <div class="container">
+          <div class="servicesCalloutInner">
+            <div class="servicesCalloutText">
+              <h3>Start with an Agent Operations Audit</h3>
+              <p>Not ready for a full platform? We'll assess your current agent landscape, set up monitoring with existing tools, and give you a roadmap. Fixed price, 2-4 weeks.</p>
+            </div>
+            <a class="button buttonPrimary" href="/agent-operations-services.html">View service packages</a>
           </div>
         </div>
       </section>
@@ -196,44 +243,50 @@
         <div class="container">
           <div class="tierHeader">
             <h2>Engagement models</h2>
-            <p>From initial assessment to fully managed operations — choose the level of support that fits your organization.</p>
+            <p>From one-time setup to fully managed operations — choose what fits your stage.</p>
           </div>
           <div class="tierGrid">
             <div class="tierCard">
-              <div class="tierName">Foundation</div>
-              <h3>Assessment & Setup</h3>
+              <div class="tierName">Services</div>
+              <h3>Audit & Setup</h3>
+              <div class="tierPrice">$5K–$40K</div>
+              <div class="tierDesc">One-time engagement</div>
               <ul>
                 <li>Agent inventory and risk assessment</li>
-                <li>Observability infrastructure setup</li>
-                <li>Cost tracking and alerting</li>
-                <li>Documentation and runbooks</li>
-                <li>Team training session</li>
+                <li>Wallet and rail mapping</li>
+                <li>Policy design and implementation</li>
+                <li>Monitoring setup (Grafana, alerts)</li>
+                <li>Documentation and team training</li>
               </ul>
-              <a class="button tierCta" href="https://cal.com/" target="_blank" rel="noreferrer">Get started</a>
+              <a class="button tierCta" href="/agent-operations-services.html">Learn more</a>
             </div>
             <div class="tierCard featured">
-              <div class="tierName">Growth</div>
-              <h3>Managed Operations</h3>
+              <div class="tierName">Platform</div>
+              <h3>Control Plane</h3>
+              <div class="tierPrice">$799/mo</div>
+              <div class="tierDesc">Up to 100 agents</div>
               <ul>
-                <li>Everything in Foundation</li>
-                <li>Ongoing monitoring and incident response</li>
-                <li>Monthly optimization reviews</li>
-                <li>Evaluation framework management</li>
-                <li>Dedicated Slack channel</li>
+                <li>Unified dashboard across all rails</li>
+                <li>Cross-wallet policy engine</li>
+                <li>Anomaly detection and alerts</li>
+                <li>Approval workflows</li>
+                <li>Audit log export</li>
               </ul>
-              <a class="button buttonPrimary tierCta" href="https://cal.com/" target="_blank" rel="noreferrer">Book consultation</a>
+              <a class="button buttonPrimary tierCta" href="https://cal.com/" target="_blank" rel="noreferrer">Join waitlist</a>
             </div>
             <div class="tierCard">
               <div class="tierName">Enterprise</div>
               <h3>Full Partnership</h3>
+              <div class="tierPrice">Custom</div>
+              <div class="tierDesc">Unlimited scale</div>
               <ul>
-                <li>Everything in Growth</li>
-                <li>Custom integrations and tooling</li>
+                <li>Everything in Platform</li>
+                <li>Custom integrations</li>
                 <li>On-call support with SLAs</li>
-                <li>Quarterly business reviews</li>
-                <li>Dedicated account team</li>
+                <li>Compliance consulting</li>
+                <li>Dedicated success team</li>
               </ul>
-              <a class="button tierCta" href="https://cal.com/" target="_blank" rel="noreferrer">Contact us</a>
+              <a class="button tierCta" href="mailto:hello@appalachiadevs.com">Contact us</a>
             </div>
           </div>
         </div>
@@ -242,10 +295,10 @@
       <!-- CTA -->
       <section class="ctaSection">
         <div class="container">
-          <h2>Ready to take control?</h2>
-          <p>Schedule a 30-minute consultation to assess your current agent landscape and identify operational gaps.</p>
+          <h2>Get ahead of the sprawl</h2>
+          <p>The wallets are live. The chaos is coming. Let's get your agents under control before the auditors ask.</p>
           <div class="ctaButtons">
-            <a class="button buttonPrimary" href="https://cal.com/" target="_blank" rel="noreferrer">Schedule consultation</a>
+            <a class="button buttonPrimary" href="/agent-operations-services.html">View services</a>
             <a class="button" href="mailto:hello@appalachiadevs.com">Email us</a>
           </div>
         </div>
