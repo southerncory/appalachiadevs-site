@@ -20,6 +20,7 @@
     <link rel="icon" type="image/svg+xml" href="/logo.svg" />
     <link rel="manifest" href="/site.webmanifest" />
     <link rel="stylesheet" crossorigin href="/assets/index-B2n2RocN.css" />
+    <link rel="stylesheet" href="/assets/mobile-fixes.css" />
     <style>
       .servicesHero { padding: 60px 0 40px; }
       .servicesHeroInner { max-width: 700px; }
@@ -92,6 +93,7 @@
     </style>
   </head>
   <body>
+    <div class="mobileOverlay" id="mobileOverlay" onclick="toggleMenu()"></div>
     <header class="topbar">
       <div class="container topbarInner">
         <a class="brand" href="/" aria-label="Appalachia Devs">
@@ -101,18 +103,36 @@
             <span>Miami, Florida • Appalachia Devs, Inc.</span>
           </span>
         </a>
-        <nav class="nav" aria-label="Primary">
-          <a href="/#services">Services</a>
-          <a href="/#approach">How we help</a>
-          <a href="/#about">About</a>
-          <a href="/#contact">Contact</a>
+        <nav class="nav" id="mainNav" aria-label="Primary">
+          <button class="mobileClose" onclick="toggleMenu()" aria-label="Close menu">✕</button>
+          <a href="/#services" onclick="toggleMenu()">Services</a>
+          <a href="/#approach" onclick="toggleMenu()">How we help</a>
+          <a href="/#about" onclick="toggleMenu()">About</a>
+          <a href="/#contact" onclick="toggleMenu()">Contact</a>
+          <a href="mailto:hello@appalachiadevs.com" class="button mobileOnly" style="margin-top:20px;">Email</a>
+          <a href="https://cal.com/" target="_blank" rel="noreferrer" class="button buttonPrimary mobileOnly">Book a call</a>
         </nav>
         <div class="ctaRow">
           <a class="button" href="mailto:hello@appalachiadevs.com">Email</a>
           <a class="button buttonPrimary" href="https://cal.com/" target="_blank" rel="noreferrer">Book a call</a>
         </div>
+        <button class="menuToggle" onclick="toggleMenu()" aria-label="Open menu">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <line x1="3" y1="6" x2="21" y2="6"></line>
+            <line x1="3" y1="12" x2="21" y2="12"></line>
+            <line x1="3" y1="18" x2="21" y2="18"></line>
+          </svg>
+          Menu
+        </button>
       </div>
     </header>
+    <script>
+      function toggleMenu() {
+        document.getElementById('mainNav').classList.toggle('active');
+        document.getElementById('mobileOverlay').classList.toggle('active');
+        document.body.style.overflow = document.getElementById('mainNav').classList.contains('active') ? 'hidden' : '';
+      }
+    </script>
 
     <main id="main">
       <!-- Hero -->

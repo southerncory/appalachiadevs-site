@@ -21,9 +21,89 @@
     <link rel="manifest" href="/site.webmanifest" />
     <script type="module" crossorigin src="/assets/index-D3PTh5II.js"></script>
     <link rel="stylesheet" crossorigin href="/assets/index-B2n2RocN.css">
+    <link rel="stylesheet" href="/assets/mobile-fixes.css">
   </head>
   <body>
-    <div id="root"></div>
+    <div id="root"></div>
+    <script>
+      // Wait for React to render, then inject mobile menu elements
+      function initMobileMenu() {
+        const topbar = document.querySelector('.topbarInner');
+        const nav = document.querySelector('.nav');
+        
+        if (!topbar || !nav) {
+          setTimeout(initMobileMenu, 100);
+          return;
+        }
+        
+        // Check if already initialized
+        if (document.getElementById('mobileOverlay')) return;
+        
+        // Add mobile overlay
+        const overlay = document.createElement('div');
+        overlay.className = 'mobileOverlay';
+        overlay.id = 'mobileOverlay';
+        overlay.onclick = toggleMenu;
+        document.body.insertBefore(overlay, document.body.firstChild);
+        
+        // Add ID to nav
+        nav.id = 'mainNav';
+        
+        // Add close button to nav
+        const closeBtn = document.createElement('button');
+        closeBtn.className = 'mobileClose';
+        closeBtn.innerHTML = '✕';
+        closeBtn.onclick = toggleMenu;
+        closeBtn.setAttribute('aria-label', 'Close menu');
+        nav.insertBefore(closeBtn, nav.firstChild);
+        
+        // Add mobile CTA buttons to nav
+        const emailBtn = document.createElement('a');
+        emailBtn.href = 'mailto:hello@appalachiadevs.com';
+        emailBtn.className = 'button mobileOnly';
+        emailBtn.style.marginTop = '20px';
+        emailBtn.textContent = 'Email';
+        emailBtn.onclick = toggleMenu;
+        nav.appendChild(emailBtn);
+        
+        const callBtn = document.createElement('a');
+        callBtn.href = 'https://cal.com/';
+        callBtn.target = '_blank';
+        callBtn.rel = 'noreferrer';
+        callBtn.className = 'button buttonPrimary mobileOnly';
+        callBtn.textContent = 'Book a call';
+        callBtn.onclick = toggleMenu;
+        nav.appendChild(callBtn);
+        
+        // Add onclick to nav links
+        nav.querySelectorAll('a:not(.mobileOnly)').forEach(a => {
+          a.addEventListener('click', toggleMenu);
+        });
+        
+        // Add hamburger button
+        const menuBtn = document.createElement('button');
+        menuBtn.className = 'menuToggle';
+        menuBtn.setAttribute('aria-label', 'Open menu');
+        menuBtn.innerHTML = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>Menu';
+        menuBtn.onclick = toggleMenu;
+        topbar.appendChild(menuBtn);
+      }
+      
+      function toggleMenu() {
+        const nav = document.getElementById('mainNav');
+        const overlay = document.getElementById('mobileOverlay');
+        if (nav) nav.classList.toggle('active');
+        if (overlay) overlay.classList.toggle('active');
+        document.body.style.overflow = nav && nav.classList.contains('active') ? 'hidden' : '';
+      }
+      
+      // Initialize when DOM is ready
+      if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', function() { setTimeout(initMobileMenu, 200); });
+      } else {
+        setTimeout(initMobileMenu, 200);
+      }
+    </script>
   </body>
 </html>
 
