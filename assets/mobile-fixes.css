@@ -296,3 +296,164 @@
     font-size: 18px !important;
   }
 }
+
+/* ========================================
+   ADDITIONAL POLISH & REFINEMENTS
+   ======================================== */
+
+/* Better hamburger menu button styling */
+.menuToggle {
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  transition: all 0.2s ease;
+}
+
+.menuToggle:hover {
+  background: rgba(255,255,255,0.08);
+  border-color: rgba(255,255,255,0.3);
+}
+
+.menuToggle:active {
+  transform: scale(0.97);
+}
+
+/* Better mobile close button */
+.mobileClose {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.1);
+  border: 1px solid rgba(255,255,255,0.2);
+  transition: all 0.2s ease;
+}
+
+.mobileClose:hover {
+  background: rgba(255,255,255,0.15);
+  border-color: rgba(255,255,255,0.3);
+}
+
+/* Smooth nav transition */
+.nav {
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Card hover effects */
+.serviceCard,
+.panel,
+.tierCard,
+.packageCard,
+.problemCard,
+.capabilityCard,
+.idealCard {
+  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+}
+
+.serviceCard:hover,
+.panel:hover,
+.problemCard:hover,
+.capabilityCard:hover,
+.idealCard:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 30px rgba(0,0,0,0.3);
+  border-color: rgba(255,255,255,0.18);
+}
+
+/* Better pill styling */
+.pill {
+  transition: all 0.15s ease;
+}
+
+.pill:hover {
+  background: rgba(255,255,255,0.12);
+  border-color: rgba(255,255,255,0.25);
+}
+
+/* Smooth button transitions */
+.button {
+  transition: all 0.2s ease;
+}
+
+/* Better focus states for accessibility */
+.button:focus-visible,
+.nav a:focus-visible,
+.menuToggle:focus-visible {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(46, 201, 255, 0.4);
+}
+
+/* Better link hover in footer */
+.footerLinks a {
+  transition: all 0.15s ease;
+}
+
+/* Gradient text animation on hero */
+@keyframes gradientShift {
+  0%, 100% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+}
+
+.heroTitle em,
+.amsHeroTitle em,
+.servicesHeroTitle em {
+  background-size: 200% auto;
+  animation: gradientShift 4s ease infinite;
+}
+
+/* Better stat styling in problem cards */
+.problemCard .stat {
+  line-height: 1;
+  margin-bottom: 12px;
+}
+
+/* Integration logos better mobile layout */
+@media (max-width: 500px) {
+  .integrationLogos {
+    display: grid !important;
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 10px !important;
+  }
+  
+  .integrationLogos span {
+    text-align: center;
+    white-space: nowrap;
+  }
+}
+
+/* Better CTA section styling */
+.ctaSection {
+  background: linear-gradient(180deg, transparent 0%, rgba(46,201,255,0.03) 100%);
+}
+
+/* Improve back link styling */
+.backLink {
+  opacity: 0.8;
+}
+
+.backLink:hover {
+  opacity: 1;
+}
+
+/* Better position badge */
+.positionBadge {
+  font-weight: 500;
+}
+
+/* FAQ accordion-like styling hint */
+.faqItem {
+  transition: background 0.15s ease;
+  padding-left: 16px;
+  padding-right: 16px;
+  margin-left: -16px;
+  margin-right: -16px;
+  border-radius: 12px;
+}
+
+.faqItem:hover {
+  background: rgba(255,255,255,0.03);
+}
+
+/* Better checkmark list items */
+.tierCard li::before,
+.packageCard li::before {
+  font-size: 14px;
+}
