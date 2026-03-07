@@ -4,16 +4,16 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <title>Agentic Management Platform | Appalachia Devs</title>
+    <title>AI Agent Operations | Appalachia Devs</title>
     <meta
       name="description"
-      content="Enterprise control plane for AI agent operations. Orchestrate, govern, and monitor your entire agent fleet from one dashboard. Built for scale, compliance, and control."
+      content="Get control of your AI agent fleet. We help teams achieve visibility, governance, and compliance across all agent deployments — regardless of framework."
     />
 
-    <meta property="og:title" content="Agentic Management Platform | Appalachia Devs" />
+    <meta property="og:title" content="AI Agent Operations | Appalachia Devs" />
     <meta
       property="og:description"
-      content="The unified control plane for AI agent operations. Orchestrate, govern, and monitor your agent fleet at enterprise scale."
+      content="Visibility, governance, and compliance for AI agent deployments. Framework-agnostic. Enterprise-ready."
     />
     <meta property="og:type" content="website" />
 
@@ -42,28 +42,28 @@
       .problemCard p { margin: 0; color: var(--muted); font-size: 14px; line-height: 1.65; }
       .problemCard .stat { font-size: 32px; font-weight: 700; background: var(--grad); -webkit-background-clip: text; background-clip: text; color: transparent; margin-bottom: 8px; }
       
-      .solutionSection { padding: 50px 0; border-top: 1px solid var(--border); }
-      .solutionHeader { margin-bottom: 32px; }
-      .solutionHeader h2 { margin: 0; font-size: 28px; letter-spacing: -0.02em; }
-      .solutionHeader p { margin: 12px 0 0; color: var(--subtle); font-size: 16px; line-height: 1.6; max-width: 620px; }
+      .pillarsSection { padding: 50px 0; border-top: 1px solid var(--border); }
+      .pillarsHeader { margin-bottom: 32px; text-align: center; }
+      .pillarsHeader h2 { margin: 0; font-size: 28px; letter-spacing: -0.02em; }
+      .pillarsHeader p { margin: 12px auto 0; color: var(--subtle); font-size: 16px; line-height: 1.6; max-width: 500px; }
       
-      .capabilityGrid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
-      .capabilityCard { padding: 22px; border-radius: var(--radius); border: 1px solid rgba(255,255,255,0.12); background: rgba(255,255,255,0.06); }
-      .capabilityCard h3 { margin: 0 0 8px; font-size: 16px; }
-      .capabilityCard p { margin: 0; color: var(--muted); font-size: 14px; line-height: 1.6; }
+      .pillarGrid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+      .pillarCard { padding: 28px; border-radius: var(--radius); border: 1px solid rgba(255,255,255,0.12); background: rgba(255,255,255,0.05); text-align: center; }
+      .pillarIcon { font-size: 32px; margin-bottom: 16px; }
+      .pillarCard h3 { margin: 0 0 12px; font-size: 20px; }
+      .pillarCard p { margin: 0 0 16px; color: var(--muted); font-size: 14px; line-height: 1.6; }
+      .pillarCard ul { list-style: none; padding: 0; margin: 0; text-align: left; }
+      .pillarCard li { padding: 8px 0; border-top: 1px solid rgba(255,255,255,0.06); color: var(--muted); font-size: 13px; display: flex; align-items: center; gap: 8px; }
+      .pillarCard li::before { content: "→"; color: #7cf0a8; }
       
-      .modulesSection { padding: 50px 0; border-top: 1px solid var(--border); }
-      .modulesHeader { margin-bottom: 32px; }
-      .modulesHeader h2 { margin: 0; font-size: 28px; letter-spacing: -0.02em; }
-      .modulesHeader p { margin: 12px 0 0; color: var(--subtle); font-size: 16px; line-height: 1.6; }
-      .moduleGrid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; }
-      .moduleCard { padding: 24px; border-radius: var(--radius); border: 1px solid rgba(255,255,255,0.12); background: rgba(255,255,255,0.05); }
-      .moduleCard.addon { border-style: dashed; background: rgba(255,255,255,0.02); }
-      .moduleTag { display: inline-block; font-size: 11px; text-transform: uppercase; letter-spacing: 0.1em; padding: 4px 8px; border-radius: 4px; margin-bottom: 12px; }
-      .moduleTag.core { background: rgba(124,240,168,0.15); color: #7cf0a8; }
-      .moduleTag.addon { background: rgba(46,201,255,0.15); color: #2ec9ff; }
-      .moduleCard h3 { margin: 0 0 8px; font-size: 18px; }
-      .moduleCard p { margin: 0; color: var(--muted); font-size: 14px; line-height: 1.6; }
+      .diffSection { padding: 50px 0; border-top: 1px solid var(--border); }
+      .diffHeader { margin-bottom: 32px; }
+      .diffHeader h2 { margin: 0; font-size: 28px; letter-spacing: -0.02em; }
+      .diffHeader p { margin: 12px 0 0; color: var(--subtle); font-size: 16px; line-height: 1.6; max-width: 600px; }
+      .diffGrid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; }
+      .diffCard { padding: 24px; border-radius: var(--radius); border: 1px solid rgba(255,255,255,0.1); background: rgba(255,255,255,0.04); }
+      .diffCard h3 { margin: 0 0 8px; font-size: 16px; color: var(--text); }
+      .diffCard p { margin: 0; color: var(--muted); font-size: 14px; line-height: 1.6; }
       
       .integrationSection { padding: 50px 0; border-top: 1px solid var(--border); }
       .integrationHeader { margin-bottom: 24px; text-align: center; }
@@ -71,40 +71,29 @@
       .integrationLogos { display: flex; justify-content: center; gap: 24px; flex-wrap: wrap; align-items: center; opacity: 0.7; }
       .integrationLogos span { font-size: 14px; color: var(--muted); padding: 10px 16px; border: 1px solid rgba(255,255,255,0.1); border-radius: 8px; }
       
-      .tierSection { padding: 50px 0; border-top: 1px solid var(--border); }
-      .tierHeader { margin-bottom: 32px; }
-      .tierHeader h2 { margin: 0; font-size: 28px; letter-spacing: -0.02em; }
-      .tierHeader p { margin: 12px 0 0; color: var(--subtle); font-size: 16px; line-height: 1.6; }
+      .engageSection { padding: 50px 0; border-top: 1px solid var(--border); }
+      .engageHeader { margin-bottom: 32px; }
+      .engageHeader h2 { margin: 0; font-size: 28px; letter-spacing: -0.02em; }
+      .engageHeader p { margin: 12px 0 0; color: var(--subtle); font-size: 16px; line-height: 1.6; }
       
-      .tierGrid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
-      .tierCard { padding: 28px 24px; border-radius: var(--radius); border: 1px solid rgba(255,255,255,0.12); background: rgba(255,255,255,0.05); display: flex; flex-direction: column; }
-      .tierCard.featured { border-color: rgba(46,201,255,0.4); background: rgba(46,201,255,0.08); }
-      .tierName { font-size: 13px; text-transform: uppercase; letter-spacing: 0.1em; color: var(--subtle); margin-bottom: 6px; }
-      .tierPrice { font-size: 28px; font-weight: 700; margin-bottom: 4px; }
-      .tierDesc { font-size: 14px; color: var(--muted); margin-bottom: 16px; }
-      .tierCard h3 { margin: 0 0 16px; font-size: 22px; }
-      .tierCard ul { list-style: none; padding: 0; margin: 0 0 20px; flex: 1; }
-      .tierCard li { padding: 8px 0; border-bottom: 1px solid rgba(255,255,255,0.06); color: var(--muted); font-size: 14px; display: flex; align-items: center; gap: 10px; }
-      .tierCard li:last-child { border-bottom: none; }
-      .tierCard li::before { content: "✓"; color: #7cf0a8; font-weight: bold; }
-      .tierCard .tierCta { margin-top: auto; }
-      
-      .servicesCallout { padding: 40px 0; border-top: 1px solid var(--border); }
-      .servicesCalloutInner { display: flex; align-items: center; justify-content: space-between; gap: 32px; padding: 32px; border-radius: var(--radius); background: linear-gradient(135deg, rgba(46,201,255,0.08), rgba(124,240,168,0.08)); border: 1px solid rgba(46,201,255,0.2); }
-      .servicesCalloutText h3 { margin: 0 0 8px; font-size: 20px; }
-      .servicesCalloutText p { margin: 0; color: var(--muted); font-size: 15px; }
+      .engageGrid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+      .engageCard { padding: 28px 24px; border-radius: var(--radius); border: 1px solid rgba(255,255,255,0.12); background: rgba(255,255,255,0.05); }
+      .engageCard.featured { border-color: rgba(46,201,255,0.4); background: rgba(46,201,255,0.08); }
+      .engageName { font-size: 13px; text-transform: uppercase; letter-spacing: 0.1em; color: var(--subtle); margin-bottom: 8px; }
+      .engageCard h3 { margin: 0 0 16px; font-size: 20px; }
+      .engageCard p { margin: 0 0 16px; color: var(--muted); font-size: 14px; line-height: 1.6; }
+      .engageCard .button { width: 100%; justify-content: center; }
       
       .ctaSection { padding: 60px 0; border-top: 1px solid var(--border); text-align: center; }
       .ctaSection h2 { margin: 0 0 12px; font-size: 28px; }
-      .ctaSection p { margin: 0 0 24px; color: var(--muted); font-size: 16px; }
+      .ctaSection p { margin: 0 0 24px; color: var(--muted); font-size: 16px; max-width: 500px; margin-left: auto; margin-right: auto; }
       .ctaSection .ctaButtons { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
       
       .backLink { display: inline-flex; align-items: center; gap: 8px; color: var(--muted); font-size: 14px; margin-bottom: 20px; padding: 8px 12px; border-radius: 10px; border: 1px solid transparent; transition: all 0.15s ease; }
       .backLink:hover { color: var(--text); border-color: rgba(255,255,255,0.15); background: rgba(255,255,255,0.05); }
       
       @media (max-width: 900px) {
-        .problemGrid, .capabilityGrid, .tierGrid, .moduleGrid { grid-template-columns: 1fr; }
-        .servicesCalloutInner { flex-direction: column; text-align: center; }
+        .problemGrid, .pillarGrid, .engageGrid, .diffGrid { grid-template-columns: 1fr; }
       }
       @media (max-width: 600px) {
         .amsHero { padding: 40px 0 30px; }
@@ -160,15 +149,16 @@
       <section class="amsHero">
         <div class="container amsHeroInner">
           <a class="backLink" href="/">← Back to Appalachia Devs</a>
-          <div class="positionBadge">Enterprise Agent Infrastructure</div>
-          <h1 class="amsHeroTitle">One control plane.<br/><em>Every agent. Full visibility.</em></h1>
+          <div class="positionBadge">AI Agent Operations</div>
+          <h1 class="amsHeroTitle">Get control of your<br/><em>AI agent fleet.</em></h1>
           <p class="amsLead">
-            Your AI agents are multiplying — across frameworks, teams, and use cases. Each runs independently with its own logs, its own access, its own blind spots. 
-            We build the unified layer that brings them all under control: orchestration, governance, monitoring, and compliance in one platform.
+            Your agents are multiplying across frameworks, teams, and use cases. We help you achieve 
+            <strong>visibility</strong> into what they're doing, <strong>governance</strong> over what they're allowed to do, 
+            and <strong>compliance</strong> proof of what they did.
           </p>
           <div class="amsCtaRow">
-            <a class="button buttonPrimary" href="/agent-operations-services.html">View services</a>
-            <a class="button" href="#capabilities">See capabilities</a>
+            <a class="button buttonPrimary" href="mailto:hello@appalachiadevs.com">Get in touch</a>
+            <a class="button" href="#pillars">Learn more</a>
           </div>
         </div>
       </section>
@@ -178,96 +168,101 @@
         <div class="container">
           <div class="problemHeader">
             <h2>The agent sprawl problem</h2>
-            <p>AI agents are powerful. But as deployments scale, so does the chaos. Most organizations have no unified view of what their agents are doing — until something breaks.</p>
+            <p>AI agents are powerful. But as deployments scale, so does the chaos. Most organizations have no unified view of what their agents are doing.</p>
           </div>
           <div class="problemGrid">
             <div class="problemCard">
               <div class="stat">5+</div>
               <h3>Frameworks per organization</h3>
-              <p>LangChain, CrewAI, AutoGPT, custom builds, vendor solutions — your agents run on different stacks with no common control layer.</p>
+              <p>LangChain, CrewAI, AutoGPT, custom builds, vendor solutions — agents run on different stacks with no common visibility layer.</p>
             </div>
             <div class="problemCard">
               <div class="stat">0</div>
               <h3>Unified policy enforcement</h3>
-              <p>Each agent has its own permissions, its own API keys, its own guardrails. No way to set organization-wide rules without touching every deployment.</p>
+              <p>Each agent has its own permissions, API keys, and guardrails. No way to set organization-wide rules without touching every deployment.</p>
             </div>
             <div class="problemCard">
               <div class="stat">???</div>
               <h3>What are your agents doing?</h3>
-              <p>When an agent goes rogue, calls the wrong API, or burns through rate limits — how long until you know? Most teams find out from customers.</p>
+              <p>When an agent misbehaves, calls the wrong API, or burns through rate limits — how long until you know? Most teams find out from customers.</p>
             </div>
             <div class="problemCard">
-              <div class="stat">50+</div>
-              <h3>Agents per org by Q4 2026</h3>
-              <p>Agent deployments are scaling fast. At 10 agents, spreadsheets work. At 50, you need infrastructure. At 200, you need us.</p>
+              <div class="stat">6 mo</div>
+              <h3>Until the audit question</h3>
+              <p>SOC2, HIPAA, internal compliance — auditors will ask "what did your AI agents do and why?" Most teams can't answer.</p>
             </div>
           </div>
         </div>
       </section>
 
-      <!-- Core Capabilities -->
-      <section class="solutionSection" id="capabilities">
+      <!-- Three Pillars -->
+      <section class="pillarsSection" id="pillars">
         <div class="container">
-          <div class="solutionHeader">
-            <h2>The orchestration layer</h2>
-            <p>A unified control plane that sits above your agent infrastructure. Framework-agnostic, deployment-flexible, built for enterprise scale.</p>
+          <div class="pillarsHeader">
+            <h2>Three pillars of agent operations</h2>
+            <p>Everything we do maps to these three capabilities.</p>
           </div>
-          <div class="capabilityGrid">
-            <div class="capabilityCard">
-              <h3>Agent Registry</h3>
-              <p>Every agent registered, versioned, and tracked. Know what's deployed, where it's running, and who owns it. Full lifecycle visibility.</p>
+          <div class="pillarGrid">
+            <div class="pillarCard">
+              <div class="pillarIcon">👁️</div>
+              <h3>Visibility</h3>
+              <p>Know what every agent is doing, in real-time.</p>
+              <ul>
+                <li>Agent registry and inventory</li>
+                <li>Real-time activity monitoring</li>
+                <li>Performance and health dashboards</li>
+                <li>Anomaly detection and alerts</li>
+              </ul>
             </div>
-            <div class="capabilityCard">
-              <h3>Policy Engine</h3>
-              <p>Define organization-wide rules: rate limits, allowed APIs, data access controls, spending caps. Enforce consistently across all agents.</p>
+            <div class="pillarCard">
+              <div class="pillarIcon">🛡️</div>
+              <h3>Governance</h3>
+              <p>Control what agents are allowed to do.</p>
+              <ul>
+                <li>Organization-wide policy rules</li>
+                <li>Rate limits and access controls</li>
+                <li>Approval workflows for sensitive actions</li>
+                <li>Cross-framework enforcement</li>
+              </ul>
             </div>
-            <div class="capabilityCard">
-              <h3>Real-Time Monitoring</h3>
-              <p>Live dashboards showing agent activity, performance metrics, and health status. Know what every agent is doing, right now.</p>
-            </div>
-            <div class="capabilityCard">
-              <h3>Anomaly Detection</h3>
-              <p>Automated alerts when behavior deviates from baseline. Catch runaway loops, excessive API calls, and policy violations before damage spreads.</p>
-            </div>
-            <div class="capabilityCard">
-              <h3>Access Control</h3>
-              <p>Granular permissions for agents and humans. Control which agents can access which resources, with full audit trails.</p>
-            </div>
-            <div class="capabilityCard">
-              <h3>Compliance & Audit</h3>
-              <p>Every action logged. Export-ready reports for SOC2, HIPAA, and internal audits. Prove what your agents did and why.</p>
+            <div class="pillarCard">
+              <div class="pillarIcon">📋</div>
+              <h3>Compliance</h3>
+              <p>Prove what agents did and why.</p>
+              <ul>
+                <li>Complete audit trails</li>
+                <li>Decision logging and traceability</li>
+                <li>Export-ready compliance reports</li>
+                <li>SOC2, HIPAA, FINRA alignment</li>
+              </ul>
             </div>
           </div>
         </div>
       </section>
 
-      <!-- Modules -->
-      <section class="modulesSection">
+      <!-- Why Us / Differentiation -->
+      <section class="diffSection">
         <div class="container">
-          <div class="modulesHeader">
-            <h2>Modular by design</h2>
-            <p>Start with core orchestration. Add specialized modules as your needs grow.</p>
+          <div class="diffHeader">
+            <h2>Why work with us</h2>
+            <p>There are observability tools. We're different.</p>
           </div>
-          <div class="moduleGrid">
-            <div class="moduleCard">
-              <span class="moduleTag core">Core</span>
-              <h3>Orchestration Hub</h3>
-              <p>Agent registry, lifecycle management, health monitoring, and centralized logging. The foundation for everything else.</p>
+          <div class="diffGrid">
+            <div class="diffCard">
+              <h3>Framework-agnostic</h3>
+              <p>LangSmith is for LangChain. LangFuse is for LangChain. We work across all your agent frameworks — LangChain, CrewAI, AutoGPT, custom builds, everything.</p>
             </div>
-            <div class="moduleCard">
-              <span class="moduleTag core">Core</span>
-              <h3>Policy & Governance</h3>
-              <p>Organization-wide rules, approval workflows, and access controls. Enforce guardrails consistently across your fleet.</p>
+            <div class="diffCard">
+              <h3>Governance-first</h3>
+              <p>Most tools are observability-only. We focus on what's harder: policy enforcement, access control, and approval workflows that actually prevent problems.</p>
             </div>
-            <div class="moduleCard addon">
-              <span class="moduleTag addon">Add-on</span>
-              <h3>Wallet & Transaction Management</h3>
-              <p>For agents that spend money. Unified view across Coinbase, Stripe, and custom payment rails. Spending limits, approvals, and audit trails.</p>
+            <div class="diffCard">
+              <h3>Compliance-ready</h3>
+              <p>We build with auditors in mind. When they ask about your AI agents, you'll have answers — documented, exportable, defensible.</p>
             </div>
-            <div class="moduleCard addon">
-              <span class="moduleTag addon">Add-on</span>
-              <h3>Multi-Agent Coordination</h3>
-              <p>Workflow orchestration for agent teams. Task routing, handoffs, and coordination protocols for complex multi-agent systems.</p>
+            <div class="diffCard">
+              <h3>Hands-on delivery</h3>
+              <p>We don't just sell software. We assess your environment, implement the right tooling, train your team, and stick around until it works.</p>
             </div>
           </div>
         </div>
@@ -290,62 +285,31 @@
         </div>
       </section>
 
-      <!-- Services Callout -->
-      <section class="servicesCallout">
+      <!-- Engagement Models -->
+      <section class="engageSection">
         <div class="container">
-          <div class="servicesCalloutInner">
-            <div class="servicesCalloutText">
-              <h3>Start with an Agent Operations Audit</h3>
-              <p>Not ready for a full platform? We'll inventory your current agent landscape, identify risks, and set up basic monitoring. Fixed price, 2-4 weeks.</p>
-            </div>
-            <a class="button buttonPrimary" href="/agent-operations-services.html">View service packages</a>
+          <div class="engageHeader">
+            <h2>How we engage</h2>
+            <p>From quick assessment to full implementation — we meet you where you are.</p>
           </div>
-        </div>
-      </section>
-
-      <!-- Engagement -->
-      <section class="tierSection">
-        <div class="container">
-          <div class="tierHeader">
-            <h2>How we work</h2>
-            <p>From initial assessment to full platform deployment — we meet you where you are.</p>
-          </div>
-          <div class="tierGrid">
-            <div class="tierCard">
-              <div class="tierName">Assessment</div>
+          <div class="engageGrid">
+            <div class="engageCard">
+              <div class="engageName">Assessment</div>
               <h3>Agent Audit</h3>
-              <ul>
-                <li>Agent inventory and risk assessment</li>
-                <li>Framework and deployment mapping</li>
-                <li>Gap analysis and recommendations</li>
-                <li>Monitoring setup guidance</li>
-                <li>Documentation and training</li>
-              </ul>
-              <a class="button tierCta" href="mailto:hello@appalachiadevs.com">Get started</a>
+              <p>We inventory your agents, map your risks, and deliver a clear report with prioritized recommendations. Typically 2 weeks.</p>
+              <a class="button" href="mailto:hello@appalachiadevs.com">Get started</a>
             </div>
-            <div class="tierCard featured">
-              <div class="tierName">Implementation</div>
-              <h3>Control Plane</h3>
-              <ul>
-                <li>Full orchestration hub deployment</li>
-                <li>Policy engine and access control</li>
-                <li>Real-time monitoring dashboard</li>
-                <li>Anomaly detection and alerts</li>
-                <li>Compliance-ready audit logs</li>
-              </ul>
-              <a class="button buttonPrimary tierCta" href="mailto:hello@appalachiadevs.com">Contact us</a>
+            <div class="engageCard featured">
+              <div class="engageName">Implementation</div>
+              <h3>Full Setup</h3>
+              <p>We implement visibility, governance, and compliance tooling across your agent fleet. Policies, monitoring, audit trails — done right.</p>
+              <a class="button buttonPrimary" href="mailto:hello@appalachiadevs.com">Contact us</a>
             </div>
-            <div class="tierCard">
-              <div class="tierName">Partnership</div>
-              <h3>Managed Operations</h3>
-              <ul>
-                <li>Everything in Implementation</li>
-                <li>All modules included</li>
-                <li>Custom integrations</li>
-                <li>On-call support with SLAs</li>
-                <li>Dedicated success team</li>
-              </ul>
-              <a class="button tierCta" href="mailto:hello@appalachiadevs.com">Contact us</a>
+            <div class="engageCard">
+              <div class="engageName">Partnership</div>
+              <h3>Ongoing Support</h3>
+              <p>Continuous monitoring, policy updates, compliance reviews, and on-call support. We become an extension of your team.</p>
+              <a class="button" href="mailto:hello@appalachiadevs.com">Contact us</a>
             </div>
           </div>
         </div>
@@ -354,11 +318,11 @@
       <!-- CTA -->
       <section class="ctaSection">
         <div class="container">
-          <h2>Get ahead of the sprawl</h2>
-          <p>Your agents are multiplying. Let's make sure they're under control before something breaks.</p>
+          <h2>Let's talk about your agents</h2>
+          <p>Tell us what you're building. We'll tell you how we can help.</p>
           <div class="ctaButtons">
-            <a class="button buttonPrimary" href="/agent-operations-services.html">View services</a>
-            <a class="button" href="mailto:hello@appalachiadevs.com">Email us</a>
+            <a class="button buttonPrimary" href="mailto:hello@appalachiadevs.com">Email us</a>
+            <a class="button" href="https://cal.com/" target="_blank" rel="noreferrer">Book a call</a>
           </div>
         </div>
       </section>

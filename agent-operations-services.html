@@ -7,13 +7,13 @@
     <title>Agent Operations Services | Appalachia Devs</title>
     <meta
       name="description"
-      content="Fixed-price consulting for AI agent operations. Audit your agent fleet, implement governance, and set up monitoring for scale."
+      content="Consulting services for AI agent operations. We help teams achieve visibility, governance, and compliance across their agent deployments."
     />
 
     <meta property="og:title" content="Agent Operations Services | Appalachia Devs" />
     <meta
       property="og:description"
-      content="Fixed-price consulting for AI agent operations. Get control of your agent fleet."
+      content="Visibility, governance, and compliance for your AI agent fleet. Assessment to implementation."
     />
     <meta property="og:type" content="website" />
 
@@ -41,7 +41,6 @@
       .packageCard.featured { border-color: rgba(46,201,255,0.4); background: rgba(46,201,255,0.08); }
       .packageName { font-size: 12px; text-transform: uppercase; letter-spacing: 0.12em; color: var(--subtle); margin-bottom: 8px; }
       .packageCard h3 { margin: 0 0 6px; font-size: 24px; }
-      .packagePrice { font-size: 36px; font-weight: 700; background: var(--grad); -webkit-background-clip: text; background-clip: text; color: transparent; }
       .packageMeta { font-size: 14px; color: var(--muted); margin-bottom: 20px; }
       .packageDesc { font-size: 14px; color: var(--muted); line-height: 1.6; margin-bottom: 20px; padding-bottom: 20px; border-bottom: 1px solid rgba(255,255,255,0.08); }
       .packageCard ul { list-style: none; padding: 0; margin: 0 0 24px; flex: 1; }
@@ -49,6 +48,15 @@
       .packageCard li:last-child { border-bottom: none; }
       .packageCard li::before { content: "✓"; color: #7cf0a8; font-weight: bold; flex-shrink: 0; margin-top: 1px; }
       .packageCta { margin-top: auto; }
+
+      .deliverablesSection { padding: 50px 0; border-top: 1px solid var(--border); }
+      .deliverablesHeader { margin-bottom: 32px; }
+      .deliverablesHeader h2 { margin: 0; font-size: 26px; letter-spacing: -0.02em; }
+      .deliverablesHeader p { margin: 10px 0 0; color: var(--muted); font-size: 15px; }
+      .deliverableGrid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+      .deliverableCard { padding: 24px; border-radius: var(--radius); border: 1px solid rgba(255,255,255,0.1); background: rgba(255,255,255,0.04); }
+      .deliverableCard h3 { margin: 0 0 8px; font-size: 16px; color: #7cf0a8; }
+      .deliverableCard p { margin: 0; color: var(--muted); font-size: 14px; line-height: 1.55; }
 
       .processSection { padding: 50px 0; border-top: 1px solid var(--border); }
       .processHeader { margin-bottom: 32px; }
@@ -60,14 +68,6 @@
       .stepNumber { width: 48px; height: 48px; border-radius: 50%; background: var(--grad); display: flex; align-items: center; justify-content: center; font-size: 20px; font-weight: 700; margin: 0 auto 16px; color: #000; }
       .processStep h3 { margin: 0 0 8px; font-size: 16px; }
       .processStep p { margin: 0; color: var(--muted); font-size: 14px; line-height: 1.5; }
-
-      .idealSection { padding: 50px 0; border-top: 1px solid var(--border); }
-      .idealHeader { margin-bottom: 24px; }
-      .idealHeader h2 { margin: 0; font-size: 22px; letter-spacing: -0.02em; }
-      .idealGrid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
-      .idealCard { padding: 20px; border-radius: var(--radius); border: 1px solid rgba(255,255,255,0.1); background: rgba(255,255,255,0.04); }
-      .idealCard h3 { margin: 0 0 8px; font-size: 15px; color: #7cf0a8; }
-      .idealCard p { margin: 0; color: var(--muted); font-size: 14px; line-height: 1.55; }
 
       .faqSection { padding: 50px 0; border-top: 1px solid var(--border); }
       .faqHeader { margin-bottom: 24px; }
@@ -84,7 +84,7 @@
       .ctaButtons { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
 
       @media (max-width: 900px) {
-        .packageGrid, .processSteps, .idealGrid { grid-template-columns: 1fr; }
+        .packageGrid, .processSteps, .deliverableGrid { grid-template-columns: 1fr; }
         .processSteps { gap: 32px; }
       }
       @media (max-width: 600px) {
@@ -138,10 +138,11 @@
       <!-- Hero -->
       <section class="servicesHero">
         <div class="container servicesHeroInner">
-          <a class="backLink" href="/agentic-management.html">← Back to Agentic Management</a>
+          <a class="backLink" href="/agentic-management.html">← Back to AI Agent Operations</a>
           <h1 class="servicesHeroTitle">Agent Operations <em>Services</em></h1>
           <p class="servicesLead">
-            Fixed-price consulting to get your AI agents under control. We audit your current state, set up monitoring and policies, and hand you a system that works — no ongoing commitment required.
+            Hands-on consulting to get your AI agents under control. We assess your current state, implement the right tooling, 
+            and leave you with visibility, governance, and compliance — not just recommendations.
           </p>
         </div>
       </section>
@@ -150,58 +151,94 @@
       <section class="packagesSection">
         <div class="container">
           <div class="packagesHeader">
-            <h2>Service packages</h2>
-            <p>Choose based on your agent count and complexity. All packages include documentation and team training.</p>
+            <h2>Engagement options</h2>
+            <p>Choose based on your scale and needs. All engagements include documentation and team training.</p>
           </div>
           <div class="packageGrid">
             <div class="packageCard">
-              <div class="packageName">Starter</div>
+              <div class="packageName">Assessment</div>
               <h3>Agent Audit</h3>
               <div class="packageMeta">Up to 10 agents • ~2 weeks</div>
-              <p class="packageDesc">Perfect for early-stage teams deploying their first production agents. Get visibility and basic controls in place.</p>
+              <p class="packageDesc">Get visibility into your current agent landscape. We identify risks, gaps, and quick wins.</p>
               <ul>
-                <li>Complete agent inventory and documentation</li>
+                <li>Complete agent inventory</li>
                 <li>Framework and deployment mapping</li>
-                <li>Risk assessment with prioritized findings</li>
-                <li>Basic monitoring setup (Grafana or similar)</li>
-                <li>Policy recommendations document</li>
-                <li>30-minute team walkthrough</li>
+                <li>Risk assessment with priorities</li>
+                <li>Governance gap analysis</li>
+                <li>Recommendations report</li>
+                <li>30-minute walkthrough</li>
               </ul>
               <a class="button packageCta" href="mailto:hello@appalachiadevs.com">Get started</a>
             </div>
             <div class="packageCard featured">
-              <div class="packageName">Growth</div>
+              <div class="packageName">Implementation</div>
               <h3>Full Setup</h3>
-              <div class="packageMeta">Up to 50 agents • ~3-4 weeks</div>
-              <p class="packageDesc">For teams scaling agent deployments. We implement policies, alerts, and governance — not just recommendations.</p>
+              <div class="packageMeta">Up to 50 agents • ~4 weeks</div>
+              <p class="packageDesc">We implement visibility, governance, and compliance tooling. You get working systems, not just docs.</p>
               <ul>
-                <li>Everything in Starter</li>
-                <li>Cross-framework policy implementation</li>
-                <li>Access control and permissions setup</li>
-                <li>Alerting setup (Slack/email on anomalies)</li>
-                <li>Audit log structure for compliance</li>
-                <li>Runbook documentation</li>
-                <li>2-hour team training session</li>
-                <li>30 days of Slack support</li>
+                <li>Everything in Audit</li>
+                <li>Monitoring and alerting setup</li>
+                <li>Policy engine implementation</li>
+                <li>Access control configuration</li>
+                <li>Audit logging infrastructure</li>
+                <li>Runbooks and documentation</li>
+                <li>Team training session</li>
+                <li>30 days support</li>
               </ul>
               <a class="button buttonPrimary packageCta" href="mailto:hello@appalachiadevs.com">Contact us</a>
             </div>
             <div class="packageCard">
               <div class="packageName">Enterprise</div>
               <h3>Compliance Ready</h3>
-              <div class="packageMeta">100+ agents • ~6-8 weeks</div>
-              <p class="packageDesc">For regulated industries and large deployments. Full compliance preparation with custom integrations.</p>
+              <div class="packageMeta">Unlimited agents • ~8 weeks</div>
+              <p class="packageDesc">Full compliance preparation for regulated industries. Audit-ready from day one.</p>
               <ul>
-                <li>Everything in Growth</li>
-                <li>Custom integration development</li>
-                <li>Compliance framework mapping (SOC2/HIPAA/FINRA)</li>
-                <li>Audit-ready documentation package</li>
-                <li>Executive summary and board deck</li>
+                <li>Everything in Full Setup</li>
+                <li>Compliance framework mapping</li>
+                <li>Custom policy development</li>
+                <li>Audit-ready documentation</li>
+                <li>Executive reporting</li>
                 <li>On-site or video workshop</li>
-                <li>60 days of dedicated support</li>
+                <li>60 days dedicated support</li>
                 <li>Quarterly review option</li>
               </ul>
               <a class="button packageCta" href="mailto:hello@appalachiadevs.com">Contact us</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- What You Get -->
+      <section class="deliverablesSection">
+        <div class="container">
+          <div class="deliverablesHeader">
+            <h2>What you get</h2>
+            <p>Concrete deliverables across visibility, governance, and compliance.</p>
+          </div>
+          <div class="deliverableGrid">
+            <div class="deliverableCard">
+              <h3>Agent Registry</h3>
+              <p>A complete inventory of every agent — what it does, where it runs, who owns it, what it can access.</p>
+            </div>
+            <div class="deliverableCard">
+              <h3>Monitoring Dashboard</h3>
+              <p>Real-time visibility into agent activity, performance, and health. Know what's happening now.</p>
+            </div>
+            <div class="deliverableCard">
+              <h3>Alert System</h3>
+              <p>Automated notifications when agents misbehave. Slack, email, PagerDuty — wherever you need them.</p>
+            </div>
+            <div class="deliverableCard">
+              <h3>Policy Rules</h3>
+              <p>Organization-wide guardrails: rate limits, allowed actions, approval requirements. Enforced consistently.</p>
+            </div>
+            <div class="deliverableCard">
+              <h3>Audit Logs</h3>
+              <p>Complete, searchable records of every agent action. Exportable, queryable, compliance-ready.</p>
+            </div>
+            <div class="deliverableCard">
+              <h3>Documentation</h3>
+              <p>Runbooks, architecture diagrams, and training materials. Your team can maintain it without us.</p>
             </div>
           </div>
         </div>
@@ -217,46 +254,23 @@
           <div class="processSteps">
             <div class="processStep">
               <div class="stepNumber">1</div>
-              <h3>Discovery Call</h3>
-              <p>30-minute call to understand your agent landscape, current pain points, and goals.</p>
+              <h3>Discovery</h3>
+              <p>We learn about your agent landscape, your stack, and your goals.</p>
             </div>
             <div class="processStep">
               <div class="stepNumber">2</div>
-              <h3>Audit & Mapping</h3>
-              <p>We inventory every agent, trace every wallet connection, and document the current state.</p>
+              <h3>Assessment</h3>
+              <p>We inventory agents, map dependencies, and identify risks and gaps.</p>
             </div>
             <div class="processStep">
               <div class="stepNumber">3</div>
               <h3>Implementation</h3>
-              <p>Set up monitoring, policies, and alerts. We do the work — you review and approve.</p>
+              <p>We build and configure the tooling. You review and approve.</p>
             </div>
             <div class="processStep">
               <div class="stepNumber">4</div>
-              <h3>Handoff & Training</h3>
-              <p>Documentation, runbooks, and team training. You own the system, fully operational.</p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- Ideal For -->
-      <section class="idealSection">
-        <div class="container">
-          <div class="idealHeader">
-            <h2>Ideal for teams that...</h2>
-          </div>
-          <div class="idealGrid">
-            <div class="idealCard">
-              <h3>AI-Native Startups</h3>
-              <p>Running 10-50 agents in production with a mix of frameworks (LangChain, CrewAI, custom). Need visibility before the next funding round or SOC2 audit.</p>
-            </div>
-            <div class="idealCard">
-              <h3>Enterprise Teams</h3>
-              <p>Deploying agents across departments with different owners and use cases. Need unified governance, monitoring, and compliance before scale creates chaos.</p>
-            </div>
-            <div class="idealCard">
-              <h3>Regulated Industries</h3>
-              <p>Healthcare, finance, or legal teams using AI agents. Need audit trails, access controls, and compliance documentation before auditors ask.</p>
+              <h3>Handoff</h3>
+              <p>Documentation, training, and support. You own it, fully operational.</p>
             </div>
           </div>
         </div>
@@ -271,23 +285,23 @@
           <div class="faqList">
             <div class="faqItem">
               <h3>What tools do you use?</h3>
-              <p>We're tool-agnostic. Depending on your stack, we might use Grafana, LangSmith, custom scripts, or a combination. We recommend what fits your existing infrastructure — no vendor lock-in.</p>
+              <p>We're tool-agnostic. Depending on your stack, we might use Grafana, custom dashboards, or integrate with tools you already have. No vendor lock-in.</p>
             </div>
             <div class="faqItem">
               <h3>Do we need to change our agent frameworks?</h3>
-              <p>No. We work with whatever you're running — LangChain, CrewAI, AutoGPT, custom Python, or any combination. The monitoring layer sits alongside your existing code.</p>
+              <p>No. We work with whatever you're running — LangChain, CrewAI, AutoGPT, custom Python, anything. The monitoring layer sits alongside your existing code.</p>
             </div>
             <div class="faqItem">
-              <h3>What if we want ongoing support after the engagement?</h3>
-              <p>We offer optional monthly retainers for ongoing monitoring, optimization reviews, and incident support. Or you can transition to our platform product when it launches.</p>
+              <h3>What if we want ongoing support?</h3>
+              <p>We offer ongoing partnerships for continuous monitoring, policy updates, and on-call support. Ask us about retainer arrangements.</p>
             </div>
             <div class="faqItem">
               <h3>How quickly can you start?</h3>
-              <p>Most engagements kick off within 1-2 weeks of signing. For urgent compliance situations, we can often accelerate.</p>
+              <p>Most engagements kick off within 1-2 weeks of signing. For urgent situations, we can often accelerate.</p>
             </div>
             <div class="faqItem">
               <h3>What do we own at the end?</h3>
-              <p>Everything. All monitoring setups, documentation, runbooks, and training materials are yours. No proprietary dependencies or ongoing licensing required.</p>
+              <p>Everything. All tooling, configurations, documentation, and training materials are yours. No proprietary dependencies.</p>
             </div>
           </div>
         </div>
@@ -297,10 +311,10 @@
       <section class="ctaSection">
         <div class="container">
           <h2>Let's talk</h2>
-          <p>Book a 30-minute discovery call. We'll map your current agent landscape and recommend the right engagement.</p>
+          <p>Tell us about your agents. We'll tell you how we can help.</p>
           <div class="ctaButtons">
-            <a class="button buttonPrimary" href="https://cal.com/" target="_blank" rel="noreferrer">Schedule a call</a>
-            <a class="button" href="mailto:hello@appalachiadevs.com">Email us</a>
+            <a class="button buttonPrimary" href="mailto:hello@appalachiadevs.com">Email us</a>
+            <a class="button" href="https://cal.com/" target="_blank" rel="noreferrer">Book a call</a>
           </div>
         </div>
       </section>
