@@ -1,0 +1,250 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SkyAgent | AA Crew Automation | Appalachia Devs</title>
+  <meta name="description" content="Automate PBS bidding, TTS trades, DOTC premium hunting, and deadhead check-ins for American Airlines crew." />
+  <link rel="icon" type="image/svg+xml" href="/logo.svg" />
+  <link rel="stylesheet" crossorigin href="/assets/index-B2n2RocN.css">
+  <style>
+    .skyHero { padding: 80px 0 60px; }
+    .skyKicker { font-size: 12px; letter-spacing: .12em; text-transform: uppercase; color: var(--subtle); margin-bottom: 16px; }
+    .skyTitle { font-size: clamp(36px, 5vw, 56px); line-height: 1.05; letter-spacing: -.03em; margin: 0 0 20px 0; }
+    .skyTitle em { font-style: normal; background: var(--grad); -webkit-background-clip: text; background-clip: text; color: transparent; }
+    .skyLead { color: var(--muted); font-size: 18px; line-height: 1.6; max-width: 600px; margin: 0 0 32px 0; }
+    
+    .skyFeatures { padding: 60px 0; border-top: 1px solid var(--border); }
+    .skyFeaturesGrid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; margin-top: 32px; }
+    .skyFeatureCard { padding: 24px; border-radius: var(--radius-sm); border: 1px solid var(--border); background: var(--panel); }
+    .skyFeatureCard h3 { margin: 0 0 10px 0; font-size: 16px; }
+    .skyFeatureCard p { margin: 0; color: var(--muted); font-size: 14px; line-height: 1.6; }
+    
+    .skyPricing { padding: 60px 0; border-top: 1px solid var(--border); }
+    .skyPricingGrid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; margin-top: 32px; }
+    .skyPricingCard { position: relative; padding: 28px 24px; border-radius: var(--radius); border: 1px solid var(--border); background: var(--panel); display: flex; flex-direction: column; }
+    .skyPricingCard.popular { border-color: var(--grad-a); }
+    .skyPricingBadge { position: absolute; top: -10px; left: 24px; padding: 4px 12px; background: var(--grad); color: #000; font-size: 11px; font-weight: 700; border-radius: 20px; text-transform: uppercase; letter-spacing: .5px; }
+    .skyPricingCard h3 { margin: 0 0 4px 0; font-size: 18px; }
+    .skyPricingCard .desc { color: var(--subtle); font-size: 13px; margin: 0 0 16px 0; }
+    .skyPricingCard .price { margin-bottom: 20px; }
+    .skyPricingCard .price span { font-size: 36px; font-weight: 700; }
+    .skyPricingCard .price small { color: var(--muted); font-size: 14px; }
+    .skyPricingCard ul { list-style: none; padding: 0; margin: 0 0 24px 0; flex: 1; }
+    .skyPricingCard li { position: relative; padding-left: 20px; font-size: 14px; color: var(--muted); margin-bottom: 10px; line-height: 1.4; }
+    .skyPricingCard li:before { content: ""; position: absolute; left: 0; top: 6px; width: 8px; height: 8px; border-radius: 50%; background: var(--grad); }
+    .skyPricingCard .button { width: 100%; text-align: center; }
+    
+    .skyFaq { padding: 60px 0; border-top: 1px solid var(--border); }
+    .skyFaqList { margin-top: 32px; max-width: 700px; }
+    .skyFaqItem { padding: 20px 24px; border-radius: var(--radius-sm); border: 1px solid var(--border); background: var(--panel); margin-bottom: 16px; }
+    .skyFaqItem h3 { margin: 0 0 8px 0; font-size: 15px; }
+    .skyFaqItem p { margin: 0; color: var(--muted); font-size: 14px; line-height: 1.6; }
+    
+    .skyContact { padding: 60px 0; border-top: 1px solid var(--border); }
+    .skyContact .panel { max-width: 500px; }
+    .skyContact h3 { margin: 0 0 16px 0; }
+    .skyContact label { display: block; margin-bottom: 16px; }
+    .skyContact label span { display: block; font-size: 13px; color: var(--muted); margin-bottom: 6px; }
+    .skyContact input, .skyContact textarea { width: 100%; padding: 12px; border-radius: 10px; border: 1px solid var(--border); background: var(--panel); color: var(--text); font-size: 14px; font-family: inherit; }
+    .skyContact input:focus, .skyContact textarea:focus { outline: none; border-color: var(--grad-a); }
+    .skyContact textarea { min-height: 100px; resize: vertical; }
+    .skyContact .button { margin-top: 8px; }
+    
+    .sectionTitle { font-size: 24px; letter-spacing: -.02em; margin: 0; }
+  </style>
+</head>
+<body>
+  <!-- Topbar -->
+  <header class="topbar">
+    <div class="container topbarInner">
+      <a href="/" class="brand">
+        <img src="/logo.svg" alt="" class="brandLogo" />
+        <div class="brandName">
+          <strong>Appalachia Devs</strong>
+          <span>SkyAgent</span>
+        </div>
+      </a>
+      <nav class="nav">
+        <a href="#features">Features</a>
+        <a href="#pricing">Pricing</a>
+        <a href="#faq">FAQ</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero -->
+    <section class="skyHero">
+      <div class="container">
+        <p class="skyKicker">For American Airlines Crew</p>
+        <h1 class="skyTitle">Automate your flight ops.<br><em>Text your agent.</em></h1>
+        <p class="skyLead">PBS bidding, TTS trades, DOTC premium hunting, deadhead check-ins. Your agent handles the portals. You fly the line.</p>
+        <div style="display: flex; gap: 12px; flex-wrap: wrap;">
+          <a href="#pricing" class="button">View Pricing</a>
+          <a href="#contact" class="button buttonPrimary">Get Started</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Features -->
+    <section class="skyFeatures" id="features">
+      <div class="container">
+        <h2 class="sectionTitle">What your agent handles</h2>
+        <div class="skyFeaturesGrid">
+          <div class="skyFeatureCard">
+            <h3>PBS Bidding</h3>
+            <p>Build layered ballots with proven strategies. Max days off, premium hunting, specific dates off.</p>
+          </div>
+          <div class="skyFeatureCard">
+            <h3>TTS Drops & Pickups</h3>
+            <p>Monitor open time, submit drop requests, grab RT-eligible sequences automatically.</p>
+          </div>
+          <div class="skyFeatureCard">
+            <h3>DOTC Premium Hunting</h3>
+            <p>Get alerted when high-value trips appear. Filter by credit, layover, or premium pay.</p>
+          </div>
+          <div class="skyFeatureCard">
+            <h3>Deadhead Check-In</h3>
+            <p>Never miss the 24-hour window. Auto check-in at T-24 with retry logic.</p>
+          </div>
+          <div class="skyFeatureCard">
+            <h3>Schedule Sync</h3>
+            <p>Automatic calendar sync. Sequences, deadheads, vacation—all on your Google Calendar.</p>
+          </div>
+          <div class="skyFeatureCard">
+            <h3>Just Text It</h3>
+            <p>"What's my schedule next week?" "Find premium trips for Thursday." Your agent responds via WhatsApp or Telegram.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Pricing -->
+    <section class="skyPricing" id="pricing">
+      <div class="container">
+        <h2 class="sectionTitle">Pricing</h2>
+        <p style="color: var(--muted); margin-top: 8px;">Self-hosted if you're technical. Managed if you want it to just work.</p>
+        <div class="skyPricingGrid">
+          <!-- Self-Hosted -->
+          <div class="skyPricingCard">
+            <h3>Self-Hosted</h3>
+            <p class="desc">Run your own agent</p>
+            <div class="price"><span>$30</span><small>/month</small></div>
+            <ul>
+              <li>Full automation scripts</li>
+              <li>PBS bid strategies</li>
+              <li>All workflow docs</li>
+              <li>GitHub repo access</li>
+              <li>Email support</li>
+            </ul>
+            <a href="https://totheskies.gumroad.com/l/aapilotpro" target="_blank" rel="noopener" class="button">Get Started</a>
+          </div>
+          
+          <!-- Managed Pilots -->
+          <div class="skyPricingCard popular">
+            <div class="skyPricingBadge">Popular</div>
+            <h3>Managed — Pilots</h3>
+            <p class="desc">We run everything</p>
+            <div class="price"><span>$75</span><small>/month</small></div>
+            <ul>
+              <li>Everything in Self-Hosted</li>
+              <li>Fully managed infrastructure</li>
+              <li>Residential IP (no blocks)</li>
+              <li>24/7 agent uptime</li>
+              <li>WhatsApp or Telegram</li>
+              <li>Priority support</li>
+              <li>Automatic updates</li>
+            </ul>
+            <a href="#contact" class="button buttonPrimary">Contact to Subscribe</a>
+          </div>
+          
+          <!-- Managed FAs -->
+          <div class="skyPricingCard">
+            <h3>Managed — Flight Attendants</h3>
+            <p class="desc">Streamlined for cabin crew</p>
+            <div class="price"><span>$50</span><small>/month</small></div>
+            <ul>
+              <li>Schedule management</li>
+              <li>Trip trade automation</li>
+              <li>Auto check-in</li>
+              <li>Calendar sync</li>
+              <li>Fully managed</li>
+              <li>WhatsApp or Telegram</li>
+              <li>Priority support</li>
+            </ul>
+            <a href="#contact" class="button">Contact to Subscribe</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="skyFaq" id="faq">
+      <div class="container">
+        <h2 class="sectionTitle">Questions</h2>
+        <div class="skyFaqList">
+          <div class="skyFaqItem">
+            <h3>What do I need to get started?</h3>
+            <p>Your AA employee ID and password. For managed plans, that's it—we handle the rest. For self-hosted, you'll need a server and some technical experience.</p>
+          </div>
+          <div class="skyFaqItem">
+            <h3>Is my login secure?</h3>
+            <p>Your credentials are encrypted and stored only on your dedicated agent instance. We never access your account directly. The agent acts on your behalf using browser automation.</p>
+          </div>
+          <div class="skyFaqItem">
+            <h3>What if AA changes their portals?</h3>
+            <p>Managed subscribers get automatic updates. We monitor for portal changes and push fixes. Self-hosted users get notified and can pull updates from the repo.</p>
+          </div>
+          <div class="skyFaqItem">
+            <h3>Why residential IP?</h3>
+            <p>AA portals flag datacenter IPs. Managed plans route through residential connections so your agent doesn't get blocked or trigger extra verification.</p>
+          </div>
+          <div class="skyFaqItem">
+            <h3>Can I cancel anytime?</h3>
+            <p>Yes. No contracts. Cancel anytime via email.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section class="skyContact" id="contact">
+      <div class="container">
+        <h2 class="sectionTitle">Get Started</h2>
+        <p style="color: var(--muted); margin: 8px 0 32px 0;">Send a message and we'll respond with next steps.</p>
+        <div class="panel">
+          <h3>Quick message</h3>
+          <form action="https://formspree.io/f/xpwzgvvd" method="POST">
+            <label>
+              <span>Name</span>
+              <input type="text" name="name" required />
+            </label>
+            <label>
+              <span>Email</span>
+              <input type="email" name="email" required />
+            </label>
+            <label>
+              <span>Message</span>
+              <textarea name="message" placeholder="I'm interested in the managed pilot plan..." required></textarea>
+            </label>
+            <button type="submit" class="button buttonPrimary">Send Message</button>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footerInner">
+      <small>&copy; 2026 Appalachia Devs, LLC. All rights reserved.</small>
+      <div class="footerLinks">
+        <a href="/">Home</a>
+        <a href="mailto:hello@appalachiadevs.com">Contact</a>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
